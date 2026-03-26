@@ -1,0 +1,123 @@
+:root{
+  --bg:#0b0f19;
+  --panel:#101827;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --border:#243044;
+  --grid:rgba(255,255,255,0.06);
+  --snake:#22c55e;
+  --snakeHead:#16a34a;
+  --food:#ef4444;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+  background: radial-gradient(1200px 600px at 50% 0%, rgba(56,189,248,0.18), transparent 55%), var(--bg);
+  color:var(--text);
+}
+
+.wrap{
+  width: min(560px, 95vw);
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.hud{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 14px;
+  background:rgba(16,24,39,0.7);
+  border:1px solid var(--border);
+  border-radius:14px;
+}
+
+.hud > div{
+  min-width: 130px;
+  font-size:14px;
+}
+
+.hint{
+  color:var(--muted);
+}
+
+.boardWrap{
+  position:relative;
+  width:512px;
+  max-width:95vw;
+  margin:0 auto;
+}
+
+canvas{
+  width:100%;
+  height:auto;
+  display:block;
+  border:1px solid var(--border);
+  border-radius:14px;
+  background:rgba(2,6,23,0.6);
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  background:rgba(0,0,0,0.45);
+  border-radius:14px;
+  padding:18px;
+}
+
+.overlayCard{
+  width:min(380px, 90%);
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:18px 16px;
+}
+
+.overlayTitle{
+  font-size:18px;
+  font-weight:700;
+  margin-bottom:10px;
+}
+
+.overlayLine{
+  margin:6px 0;
+  color:var(--text);
+  font-size:14px;
+}
+
+.overlaySub{
+  margin-top:12px;
+  color:var(--muted);
+  font-size:12.5px;
+}
+
+button{
+  margin-top:14px;
+  width:100%;
+  appearance:none;
+  border:1px solid rgba(34,197,94,0.35);
+  background:rgba(34,197,94,0.12);
+  color:var(--text);
+  padding:10px 12px;
+  border-radius:12px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+button:hover{
+  background:rgba(34,197,94,0.18);
+}
+
